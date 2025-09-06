@@ -1,11 +1,11 @@
 import { GetServerSideProps } from 'next';
-import Layout from '../../components/Layout';
 import { fetchProductById } from '../../api/products';
+import Layout from '../../components/Layout';
 import { Product } from '../../types/product';
 
 interface Props {
-    product?: Product;
-    error?: string;
+    product: Product | null;
+    error: string | null;
     serverTime: string;
 }
 
@@ -69,18 +69,25 @@ export default function ProductDetail({ product, error, serverTime }: Props) {
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
     const id = ctx.params?.id as string;
-    let product: Product | undefined;
-    let error: string | undefined;
+
+    let product: Product | null = null;
+    let error: string | null = null;
+
     try {
         product = await fetchProductById(id);
+        if (!product) {
+            // Opcional: devolver 404 en lugar de mostrar mensaje
+            return { notFound: true };
+        }
     } catch (e: any) {
-        error = e.message ?? 'No se pudo cargar el producto';
+        error = e?.message ?? 'No se pudo cargar el producto';
     }
+
     return {
         props: {
             product,
             error,
-            serverTime: new Date().toLocaleString(),
+            serverTime: new Date().toISOString(),
         },
     };
 };
