@@ -10,7 +10,6 @@ export default function Home() {
       <a href="/products" style={{ color: "#2563eb" }}>
         Ir al catálogo →
       </a>
-      {/* Displaying the "Home" heading on the page (localhost:3000) */}
     </div>
   );
 }

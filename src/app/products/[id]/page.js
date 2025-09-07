@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
-import { fetchProduct } from "../../lib/products";
+import { fetchProduct } from "../api/products";
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }) {
   const product = await fetchProduct(params.id);

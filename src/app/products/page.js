@@ -1,5 +1,5 @@
 import ProductCard from "../components/ProductCard";
-import { fetchProducts } from "../lib/products";
+import { fetchProducts } from "./api/products";
 
 export const dynamic = "force-dynamic";
 
