@@ -2,7 +2,7 @@ export default function ProductCard({ product }) {
 	return (
 		<a
 			href={`/products/${product.id}`} // ACTUALIZADO (antes /product/${id})
-			className="rounded-md border p-4 shadow-sm bg-white hover:shadow-md transition block"
+			className="rounded-md border p-4 shadow-sm bg-background-neutral-weak hover:shadow-xl hover:scale-105 transition block"
 		>
 			<div className="aspect-square flex items-center justify-center mb-3">
 				<img
@@ -12,7 +12,7 @@ export default function ProductCard({ product }) {
 					loading="lazy"
 				/>
 			</div>
-			<h2 className="line-clamp-2 text-sm font-medium mb-2">{product.title}</h2>
+			<h2 className="line-clamp-2 text-sm font-bold mb-2">{product.title}</h2>
 			<p className="text-lg font-semibold text-emerald-600 mb-2">
 				${product.price}
 			</p>

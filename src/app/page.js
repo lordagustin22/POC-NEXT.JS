@@ -5,7 +5,7 @@ import Link from "next/link";
 // This is the Home component, which serves as the home directory
 export default function Home() {
   return (
-    <main className="min-h-[calc(100dvh-4rem)] flex items-center justify-center px-4 py-10 bg-gradient-to-b from-slate-50 to-slate-100">
+    <main className="min-h-[calc(100dvh-4rem)] flex items-center justify-center px-4 py-10">
       <div className="max-w-xl w-full space-y-8">
         <header className="space-y-3">
           <h1 className="text-4xl font-bold tracking-tight text-slate-900">
@@ -21,7 +21,7 @@ export default function Home() {
         <div>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-medium text-white shadow-sm ring-1 ring-blue-600/20 hover:bg-blue-500 hover:shadow transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary-link px-5 py-3 text-md text-white shadow-sm ring-2 ring-gray-800 hover:bg-primary-link-hover hover:shadow transition"
           >
             Ir al catálogo
             <span aria-hidden="true">→</span>

@@ -1,11 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #dadada;
-  --foreground: #303030;
+
 }
 
 @theme inline {
+  --background: #f5ede9;
+  --foreground: #303030;
+
+  --color-primary-link: #cc2e00;
+  --color-primary-link-hover: #a92200;
+
+  --color-background-neutral-strong: #eaddd5;
+  --color-background-neutral-medium: #f5ede9;
+  --color-background-neutral-weak: #f9f5f3;
+  --color-background-neutral-weakest: #fff;
+
+  --color-header-black: #181516;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
