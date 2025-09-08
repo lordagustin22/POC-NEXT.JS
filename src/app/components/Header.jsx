@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
 	return (
 		<header className="border-b bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">
@@ -6,18 +8,18 @@ export default function Header() {
 					POC SSR
 				</span>
 				<nav className="flex gap-6 text-sm">
-					<a href="/" className="hover:text-emerald-600">
+					<Link href="/" className="hover:text-emerald-600">
 						Home
-					</a>
-					<a href="products" className="hover:text-emerald-600">
+					</Link>
+					<Link href="products" className="hover:text-emerald-600">
 						Productos
-					</a>
-					<a href="#" className="hover:text-emerald-600">
+					</Link>
+					<Link href="#" className="hover:text-emerald-600">
 						Acerca
-					</a>
-					<a href="#" className="hover:text-emerald-600">
+					</Link>
+					<Link href="#" className="hover:text-emerald-600">
 						Contacto
-					</a>
+					</Link>
 				</nav>
 			</div>
 		</header>
