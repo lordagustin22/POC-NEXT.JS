@@ -1,17 +1,26 @@
 export default function LoadingProducts() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 animate-pulse">
-      <div className="h-8 w-72 bg-gray-200 rounded mb-6" />
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-        {Array.from({ length: 8 }).map((_, i) => (
-          <div key={i} className="rounded-md border p-4 bg-white">
-            <div className="h-32 bg-gray-200 mb-3 rounded" />
-            <div className="h-4 bg-gray-200 mb-2 rounded" />
-            <div className="h-4 bg-gray-200 w-2/3 mb-4 rounded" />
-            <div className="h-8 bg-gray-200 rounded" />
-          </div>
-        ))}
+    <main className="mx-auto max-w-5xl px-4 py-10">
+      <div className="flex items-center gap-3 mb-8">
+        <div className="h-5 w-5 rounded-full border-2 border-emerald-600 border-t-transparent animate-spin" />
+        <p className="text-sm text-emerald-700">Cargando productos…</p>
       </div>
-    </div>
+
+      <div className="grid gap-6 md:grid-cols-2">
+        <div className="border rounded-lg bg-white p-6">
+          <div className="h-80 w-full bg-slate-200 animate-pulse rounded" />
+        </div>
+        <div className="space-y-4">
+          <div className="h-7 w-3/4 bg-slate-200 animate-pulse rounded" />
+          <div className="h-6 w-24 bg-slate-200 animate-pulse rounded" />
+          <div className="space-y-2">
+            <div className="h-4 w-full bg-slate-200 animate-pulse rounded" />
+            <div className="h-4 w-11/12 bg-slate-200 animate-pulse rounded" />
+            <div className="h-4 w-10/12 bg-slate-200 animate-pulse rounded" />
+          </div>
+          <div className="h-5 w-28 bg-slate-200 animate-pulse rounded-full" />
+        </div>
+      </div>
+    </main>
   );
 }
