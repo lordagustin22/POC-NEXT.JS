@@ -1,6 +1,10 @@
+"use client";
+
+import Link from 'next/link';
+
 export default function ProductCard({ product }) {
 	return (
-		<a
+		<Link
 			href={`/products/${product.id}`} // ACTUALIZADO (antes /product/${id})
 			className="rounded-md border p-4 shadow-sm bg-background-neutral-weak hover:shadow-xl hover:scale-105 transition block"
 		>
@@ -19,6 +23,6 @@ export default function ProductCard({ product }) {
 			<p className="line-clamp-3 text-xs text-gray-500">
 				{product.description}
 			</p>
-		</a>
+		</Link>
 	);
 }
