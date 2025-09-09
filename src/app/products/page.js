@@ -2,8 +2,6 @@ import { notFound } from "next/navigation";
 import ProductCard from "../components/ProductCard";
 import { fetchProducts } from "./api/products";
 
-export const dynamic = "force-dynamic";
-
 export const metadata = {
   title: "Productos | POC SSR",
   description: "Listado de productos (SSR) con FakeStore API",

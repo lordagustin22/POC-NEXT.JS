@@ -1,9 +1,9 @@
-export default function LoadingProducts() {
+export default function LoadingState() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-10">
       <div className="flex items-center gap-3 mb-8">
         <div className="h-5 w-5 rounded-full border-2 border-emerald-600 border-t-transparent animate-spin" />
-        <p className="text-sm text-emerald-700">Cargando productos…</p>
+        <p className="text-sm text-emerald-700">Cargando…</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
