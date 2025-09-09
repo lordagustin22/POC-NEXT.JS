@@ -2,8 +2,6 @@ import { fetchProduct } from "../api/products";
 import { notFound } from "next/navigation";
 import ProductDetail from "../../components/ProductDetail";
 
-export const dynamic = "force-dynamic"; // ensure SSR + streaming
-
 export async function generateMetadata({ params }) {
   const { id } = await params; // await params first
   const product = await fetchProduct(id);
@@ -12,7 +10,7 @@ export async function generateMetadata({ params }) {
   return { title: `${product.title} | POC SSR` };
 }
 
-export default async function ProductDet({ params }) {
+export default async function ProductGet({ params }) {
   const { id } = await params; // await params first
   const product = await fetchProduct(id);
 
