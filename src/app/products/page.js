@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import ProductCard from "../components/ProductCard";
 import { fetchProducts } from "./api/products";
 
@@ -10,6 +11,8 @@ export const metadata = {
 
 export default async function ProductsPage() {
   const products = await fetchProducts();
+
+  if (!products) return notFound();
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
