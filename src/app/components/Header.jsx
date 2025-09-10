@@ -14,7 +14,10 @@ export default function Header() {
                         Home
                     </Link>
                     <Link href="/products" className="hover:text-emerald-600">
-                        Productos
+                        Productos (SSR)
+                    </Link>
+                    <Link href="/products-ssg" className="hover:text-emerald-600">
+                        Productos (SSG)
                     </Link>
                     <Link href="#" className="hover:text-emerald-600">
                         Acerca

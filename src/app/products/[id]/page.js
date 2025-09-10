@@ -1,10 +1,10 @@
-import { fetchProduct } from "../api/products";
+import { getServerSideProduct } from "../../api/products";
 import { notFound } from "next/navigation";
 import ProductDetail from "../../components/ProductDetail";
 
 export async function generateMetadata({ params }) {
   const { id } = await params; // await params first
-  const product = await fetchProduct(id);
+  const product = await getServerSideProduct(id);
 
   if (!product) return { title: "Producto no encontrado | POC SSR" };
   return { title: `${product.title} | POC SSR` };
@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ProductGet({ params }) {
   const { id } = await params; // await params first
-  const product = await fetchProduct(id);
+  const product = await getServerSideProduct(id);
 
   if (!product) return notFound();
 
